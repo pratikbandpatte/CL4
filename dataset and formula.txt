@@ -1,0 +1,64 @@
+Ofeed dataset :----   https://services.odata.org/V3/Northwind/Northwind.svc/
+
+
+YT Video---- https://youtu.be/uRB_5RuV0ds?si=GKfEPVX3fWbeB6aj
+
+alternate dataset:---
+https://www.kaggle.com/datasets/vivek468/superstore-dataset-final
+
+
+
+STEPS TO TRANSFORM:
+
+-from list of tables, select orders and products
+-in products table, remove other columns of interest (keep productid, productname, qtyperunit, unitinstock)
+-change the data type of the unitinstock column to whole number
+-expand the order_details table (from orders)
+-calculate linetotal for each order_details row (create linetotal as a new custom column with formula as order_details.unitprice * orderdetails.qty)
+-rename and reorder linetotal column
+-apply and close
+-make relationship between both tables
+
+
+
+
+
+
+
+#######detail for each chart:################
+1. Bar Chart: Sales by Product Category
+X-axis → Product Category
+
+Y-axis → Sales (Sum)
+
+2. Pie Chart: Sales Share by Region
+Legend → Region
+
+Values → Sales (Sum)
+
+3. Line Chart: Sales Trend over Time
+X-axis → Order Date (Make sure it is set as Month or Date Hierarchy)
+
+Y-axis → Sales (Sum)
+
+4. KPI Cards:
+Card 1 → Value = Sales (Sum)
+
+Card 2 → Value = Profit (Sum)
+
+5. Matrix Table (like Pivot Table):
+Rows → Product Category
+
+Columns → None (Optional: add Region if you want)
+
+Values → Sales (Sum), Profit (Sum), Profit Margin (Average)
+
+6. Stacked Column Chart: Profit Margin by Region
+X-axis → Region
+
+Y-axis → Profit Margin (Average)
+
+7. Map (Optional):
+Location → Region
+
+Size → Sales (Sum)
